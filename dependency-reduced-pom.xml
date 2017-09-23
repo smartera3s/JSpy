@@ -65,6 +65,30 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>commons-mvn-repo</id>
+      <url>https://raw.github.com/mostafaelganainy/socialhub-commons/mvn-repo/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>persistenceLayer-mvn-repo</id>
+      <url>https://raw.github.com/smartera3s/PersistenceLayer/mvn-repo/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
   <distributionManagement>
     <repository>
       <id>internal.repo</id>

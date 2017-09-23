@@ -19,9 +19,61 @@
 	        <url>file://${project.build.directory}/mvn-repo</url>
 	    </repository>
 	</distributionManagement>
-	
+	<repositories>
+	    <repository>
+	        <id>commons-mvn-repo</id>
+	        <url>https://raw.github.com/mostafaelganainy/socialhub-commons/mvn-repo/</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	            <updatePolicy>always</updatePolicy>
+	        </snapshots>
+	    </repository>
+	    
+	    
+	    <repository>
+	        <id>persistenceLayer-mvn-repo</id>
+	        <url>https://raw.github.com/smartera3s/PersistenceLayer/mvn-repo/</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	            <updatePolicy>always</updatePolicy>
+	        </snapshots>
+	    </repository>
+	    
+	</repositories>
 	
   <dependencies>
+  
+ 		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>2.12.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20090211</version>
+		</dependency>
+		
+  		<dependency>
+			<groupId>com.smartera.infrastructure</groupId>
+		  	<artifactId>persistenceLayer</artifactId>
+		  	<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>socialhub-commons</groupId>
+			<artifactId>socialhub-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
 	  <dependency>
 	    <groupId>org.javassist</groupId>
 	    <artifactId>javassist</artifactId>
